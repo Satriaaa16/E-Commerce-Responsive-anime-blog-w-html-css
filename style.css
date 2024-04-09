@@ -1,0 +1,598 @@
+body{
+    background-color: rgba(167, 181, 8, 0.587);
+}
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;font-family: Verdana, Geneva, Tahoma, sans-serif; outline: none; border: none;
+    text-decoration: none; text-transform: capitalize; transition: 2s;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: azure;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 1, 0.5);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #444;
+    font-weight: 900;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0% 1.5rem;
+    color: #777;
+}
+
+header .navbar a:hover{
+    
+    color: rgba(86, 235, 12, 0.587);
+    font-weight: 500;
+}
+
+header .icons a{
+    font-size: 3rem;
+    color:#222;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color: #fb6f92;
+}
+
+header #toogler{
+    display: none;
+
+
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #222;
+    border: 0.1rem solid rgba(0,0, 1, 0.3);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none;
+
+
+}
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+
+@media(max-width: 768px){
+    header .fa-bars{
+        
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eee;
+        border-top: 0.1rem solid rgba(103, 196, 72, 0.559);
+        /*clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    }
+
+    header #toogler:checked ~.navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background-color: greenyellow;
+        border: 1rem solid rgba(86, 235, 12, 0.587);
+        display: block;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
+section{
+    padding: 2rem 9%;
+}
+
+.Home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0, 0.6),rgba(0,0,0, 0.6)), url(violeet.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Home .content{
+    max-width: 50rem;
+}
+
+.Home .content h3{
+    font-size: 5rem;
+    color: #f2c5d0;
+}
+
+.Home .content span{
+    font-size: 3.5rem;
+    color: #ff6f92;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+.Home .content p{
+    font-size: 1.5rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.btn{
+    display: inline-block;
+    margin: 1rem;
+    background-color: #7e8f6a;
+    color: #eee;
+    padding: 0.9rem 3.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    cursor: pointer;
+
+}
+
+.btn:hover{
+    background-color: #fb6f92;
+}
+
+@media(max-width:991px){
+    section{
+        padding: 2rem;
+    }
+    .Home{
+        background-position: left;
+    }
+    .Home content h3{
+        font-size: 6rem;
+        color: #eee;
+    }
+    .Home content span{
+        font-size: 2.5rem;
+    }
+
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+    color: #222;
+    margin: 2rem 0;
+    background-color: rgba(232, 241, 228, 0.864);
+}
+
+.heading span{
+    color: rgb(214, 197, 4);
+}
+.About .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+
+}
+
+.About .row .gif{
+    flex: 1 1 40rem;
+    position: relative;
+}
+.About .row .gif img{
+    width: 100%;
+    height: 100%;
+    border: 1rem solid #eee;
+    box-shadow: 0 0.5rem 1rem rgba(167, 181, 8, 0.587);
+    object-fit: cover;
+}
+.About .row .gif h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background-color: #eee;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+.About .row .content {
+    flex: 1 1 40rem;
+}
+
+.About .row .content h3{
+    font-size: 3rem;
+    color: #222;
+}
+.About .row .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 0.5rem 0;
+    padding: 1rem;
+    line-height: 1.5;
+
+}
+@media(max-width:450px){
+    .heading{
+        font-size: 3rem;
+    }
+}
+
+.icons_container{
+    background-color: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+}
+
+.icons_container .icons{
+    background-color: #fff;
+    border: 1.5rem solid rgba(0,0, 0, 0.1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+
+}
+
+.icons_container .icons i{
+    font-size: 5rem;
+    margin-right: 2rem;
+    color: #444;
+    cursor: pointer;
+}
+
+.icons_container .icons i:hover{
+    color: rgba(86, 235, 12, 0.587);
+}
+ .icons_container .icons h3{
+    color: #444;
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+ }
+
+ .icons_container .icons span{
+    color: #666;
+    font-size: 1.4rem;
+ }
+
+ .Products .card_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+ }
+
+ .Products .card_container .card{
+    flex: 1 1 30;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    position: relative;
+ }
+
+ .Products .card_container .card .discount{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.7rem 1rem;
+    color:#ddd;
+    background-color: rgba(30, 48, 24, 0.559);
+    z-index: 1;
+    border-radius: 0.5rem;
+ }
+ .Products .card_container .card .card_img{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+ }
+ .Products .card_container .card .card_img img{
+    height: 250px; /* Set a fixed height for the images */
+    width: 100%; /* Ensure images take the full width of their containers */
+    object-fit: cover; /* Maintain the aspect ratio and crop the images as needed */
+    border-radius: 0.8rem 0.8rem 0 0; /* Apply rounded corners to the top */
+}
+ 
+ .Products .card_container .card:hover .card_img img{
+    transform: scale(1.5);
+   
+ }
+ .Products .card_container .card .card_img .icons{
+
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+
+}
+.Products .card_container .card:hover .card_img .icons{
+    bottom: 0;
+}
+
+.Products .card_container .card .card_img .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.8rem;
+    width: 50%;
+    background-color: blueviolet;
+    color: whitesmoke;
+}
+.Products .card_container .card .card_img .icons .card_btn{
+    border-left: 0.1rem solid #fff6;
+    border-right: 0.1ren solid #fff6;
+    width: 100%;
+}
+.Products .card_container .card .card_img .icons a:hover{
+    background-color: rgba(86, 235, 12, 0.587) ;
+}
+.Products .card_container .content{
+    padding: 2rem;
+    text-align: center;
+}
+.Products .card_container .content h3{
+    font-size: 2.5rem;
+    color: #444;
+}
+
+.Products .card_container .content .price{
+    font-size: 2rem;
+    color: green;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.Products .card_container .content .price span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.Review .card_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.Review .card_container .card{
+    flex: 1 1 30rem;
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.1);
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.Review .card_container .card .stars i{
+    color: #7e8f6a;
+    font-size: 2rem;
+}
+.Review .card_container .fa-quote-left{
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+.Review .card_container .card p{
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-top: 2rem;
+}
+.Review .card_container .card .user img {
+    height: 100px; /* Adjust the height as needed */
+    width: auto;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-right: 1rem ;/* To make the images circular */
+}
+.Review .card_container .card .user h3{
+    font-size: 2rem;
+    color: #222;
+}
+
+.Review .card_container .card .user span{
+    font-size: 1.5rem;
+    color: #999;
+}
+
+.Contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.Contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border: 1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    background-color:#fff ;
+}
+.Contact .row .image{
+    flex: 1 1 40rem;
+}
+.Contact .row .image img{
+    width: 100%;
+}
+.Contact .row form .card{
+    padding: 1rem;
+    margin: 0.7rem 0;
+    font-size: 1.7rem;
+    color: #444;
+    text-transform: none;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.Contact .row form .card:focus{
+    border-color: greenyellow;
+}
+
+.Contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-section {
+    padding: 20px;
+}
+
+.footer-section.about {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-section.about .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-section.about .logo span {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.footer-section.about p {
+    margin-top: 20px;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.footer-section.links ul {
+    list-style: none;
+}
+
+.footer-section.links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section.contact-form {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-section.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.footer-section.contact-form input,
+.footer-section.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-section.contact-form textarea {
+    resize: none;
+}
+
+.footer-section.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section.contact-form button:hover {
+    background-color: #ff7043;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #222;
+    padding: 10px 0;
+}
